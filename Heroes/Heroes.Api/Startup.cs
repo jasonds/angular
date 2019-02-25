@@ -111,9 +111,9 @@ namespace Heroes.Api
 
             app.UseHttpsRedirection();
 
-            app.UseMvc();
-
             app.UseAuthentication();
+
+            app.UseMvc();
         }
     }
 }
