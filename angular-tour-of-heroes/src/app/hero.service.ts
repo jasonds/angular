@@ -12,7 +12,7 @@ import { MessageService } from './message.service';
 })
 export class HeroService {
 
-  private heroesUrl = 'https://localhost:44392/api/heroes';  // URL to web api
+  private heroesUrl = 'https://localhost:44324/api/heroes';  // URL to web api
 
   constructor(
     private http: HttpClient,

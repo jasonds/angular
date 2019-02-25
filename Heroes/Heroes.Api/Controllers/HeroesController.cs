@@ -5,19 +5,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Heroes.Api.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class HeroesController : ControllerBase
+    public class HeroesController : BaseController
     {
         // GET api/heroes
         [HttpGet]
+        [Route("")]
         public ActionResult<IEnumerable<Hero>> Get()
         {
             return Heroes;
         }
 
         // GET api/heroes/5
-        [HttpGet("{id}")]
+        [HttpGet]
+        [Route("{id}")]
         public ActionResult<Hero> Get(int id)
         {
             return Heroes.SingleOrDefault(x => x.Id == id);
